@@ -1,0 +1,47 @@
+<div class="container content">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="col-md-6">
+            <div class="row">
+                <h3 style="text-align:center;">{{'LOGIN'|translate}}</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="username">{{'NAME'|translate}}: </label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <input class="form-control" id="username" type="text" formControlName="username">
+                    </div>
+                    <div class="row">
+                        <span class="text-danger"
+                            *ngIf="(loginFormControl['username'].touched || submitted) && loginFormControl['username'].errors?.required">
+                            Name is required.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="name">{{'PASSWORD'|translate}} </label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <input class="form-control" id="password" type="password" formControlName="password">
+                    </div>
+                    <div class="row">
+                        <span class="text-danger"
+                            *ngIf="(loginFormControl['password'].touched || submitted) && loginFormControl['password'].errors?.required">
+                            Password is required.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a routerLink="/register" class="float-right">{{'REGISTER_ACCOUNT'|translate}}</a>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary float-right col-md-3" type="submit">{{'LOGIN'|translate}}</button>
+            </div>
+        </div>
+    </form>
+</div>

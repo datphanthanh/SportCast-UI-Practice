@@ -1,0 +1,63 @@
+<div class="container content">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <div class="row">
+        <h3 style="text-align:center;">{{'REGISTER_ACCOUNT'|translate}}</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="username">{{'NAME'|translate}}: </label>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <input class="form-control" id="username" type="text" formControlName="username">
+          </div>
+          <div class="row">
+            <span class="text-danger"
+              *ngIf="(loginFormControl['username'].touched || submitted) && loginFormControl['username'].errors?.required">
+              Name is required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="password">{{'PASSWORD'|translate}}: </label>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <input class="form-control" id="password" type="password" formControlName="password">
+          </div>
+          <div class="row">
+            <span class="text-danger"
+              *ngIf="(loginFormControl['password'].touched || submitted) && loginFormControl['password'].errors?.required">
+              Password is required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="repeat-password">{{'REPEAT_PASSWPORD'|translate}}: </label>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <input class="form-control" id="repeat-password" type="password" formControlName="repeatPassword">
+          </div>
+          <div class="row">
+            <span class="text-danger"
+              *ngIf="(loginFormControl['repeatPassword'].touched || submitted) && loginFormControl['repeatPassword'].errors?.required">
+              Repeat Password is required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a routerLink="/login" class="float-right">{{'LOGIN'|translate}}</a>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary float-right col-md-3" type="submit">{{'SUBMIT'|translate}}</button>
+      </div>
+    </div>
+  </form>
+</div>
