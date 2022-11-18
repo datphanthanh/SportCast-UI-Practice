@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <h5>{{'BET_SELECTIONS'|translate}}</h5>
+    <ul>
+        <li *ngFor="let selection of betSelections">{{selection}}</li>
+    </ul>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="username">{{'BET_ODDS'|translate}}: </label>
+        </div>
+        <div class="col-md-4">
+            <input [value]="betOdds" class="form-control" id="betOdds" type="text">
+        </div>
+    </div>
+</div>

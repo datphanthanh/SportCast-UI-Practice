@@ -4,5 +4,12 @@
     "PASSWORD": "Password",
     "REPEAT_PASSWPORD": "Repeat Password",
     "REGISTER_ACCOUNT": "Register new account",
-    "SUBMIT": "Submit"
+    "SUBMIT": "Submit",
+    "BET_SELECTIONS": "Bet Selections",
+    "BET_ODDS": "Bet Odds",
+    "TOTAL_BETS": "Total bets",
+    "EST_WINNINGS": "Est. Winnings",
+    "EMAIL": "Email",
+    "PAYMENT": "Payment",
+    "SEND_TO_EMAIL": "Send information to email"
 }

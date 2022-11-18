@@ -4,5 +4,12 @@
     "PASSWORD": "Mật khẩu",
     "REPEAT_PASSWPORD": "Xác nhận mật khẩu",
     "REGISTER_ACCOUNT": "Đăng ký tài khoản mới",
-    "SUBMIT": "Xác nhận"
+    "SUBMIT": "Xác nhận",
+    "BET_SELECTIONS": "Các lựa chọn đặt cược",
+    "BET_ODDS": "Tỷ lệ cược",
+    "TOTAL_BETS": "Tổng số tiền cược",
+    "EST_WINNINGS": "Ước tính Tiền thắng",
+    "EMAIL": "E-mail",
+    "PAYMENT": "Thanh toán",
+    "SEND_TO_EMAIL": "Gửi thông tin đến email"
 }

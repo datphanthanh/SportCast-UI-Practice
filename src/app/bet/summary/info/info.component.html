@@ -1,0 +1,63 @@
+<h5>Information</h5>
+<div class="container content wrapper">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4">
+          <label for="username">{{'NAME'|translate}}: </label>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <input class="form-control" id="username" type="text" formControlName="username">
+          </div>
+          <div class="row">
+            <span class="text-danger"
+              *ngIf="(loginFormControl['username'].touched || submitted) && loginFormControl['username'].errors?.required">
+              Name is required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="col-md-4">
+          <label for="email">{{'EMAIL'|translate}}: </label>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <input class="form-control" id="email" type="email" formControlName="email">
+          </div>
+          <div class="row">
+            <span class="text-danger"
+              *ngIf="(loginFormControl['email'].touched || submitted) && loginFormControl['email'].errors?.required">
+              Email is required.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-4">
+          <label for="payment">PAYMENT</label>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <input class="form-control" id="payment" type="text" formControlName="payment">
+          </div>
+          <div class="row">
+            <span class="text-danger"
+              *ngIf="(loginFormControl['payment'].touched || submitted) && loginFormControl['payment'].errors?.required">
+              Payment is required.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 sendToEmail">
+        <input class="form-check-input" type="checkbox" value="">
+        <label class="form-check-label" for="sendToEmail">
+          Send information to email
+        </label>
+      </div>
+    </div>
+  </form>
+</div>

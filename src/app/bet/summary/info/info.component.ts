@@ -1,32 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'app-info',
+  templateUrl: './info.component.html',
+  styleUrls: ['./info.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class InfoComponent implements OnInit {
   profileForm: FormGroup;
   submitted = false;
+
   constructor(
     private fb: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router
-    ) {
+  ) {
     this.profileForm = fb.group({
       username: new FormControl('', [
-       Validators.required 
+        Validators.required
       ]),
       password: new FormControl('', [
-        Validators.required 
-       ]),
+        Validators.required
+      ]),
       repeatPassword: new FormControl('', [
-        Validators.required 
-       ]),
+        Validators.required
+      ]),
     });
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -35,7 +33,6 @@ export class RegisterComponent implements OnInit {
     this.submitted = true;
     console.warn(this.profileForm.value);
     if (this.profileForm.valid) {
-      this.router.navigate(['/login'], { relativeTo: this.route });
       console.warn(this.profileForm.value);
     }
   }

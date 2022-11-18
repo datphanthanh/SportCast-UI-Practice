@@ -1,0 +1,34 @@
+<app-selection></app-selection>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-md-4">
+            <input class="form-control" id="enter-stake" type="number" step="0.01" placeholder="Enter Stake" [formControl]="enterStake">
+        </div>
+    </div>
+    <div class="row">
+        <span class="text-danger"
+            *ngIf="enterStake.touched && enterStake.errors?.required">
+            Stake is required.
+        </span>
+        <span class="text-danger"
+            *ngIf="enterStake.touched && enterStake.errors?.stakeNotAvailable">
+            Stake must be greater than 0.
+        </span>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label>{{'TOTAL_BETS'|translate}}: 3</label>
+        </div>
+        <div class="col-6">
+            <label class="float-right">4.00 USD</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label>{{'EST_WINNINGS'|translate}}</label>
+        </div>
+        <div class="col-6 ">
+            <label class="float-right">8.00 USD</label>
+        </div>
+    </div>
+</div>

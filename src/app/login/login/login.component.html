@@ -1,14 +1,14 @@
 <div class="container content">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="col-md-6">
+        <div class="col-md-6 col-12">
             <div class="row">
                 <h3 style="text-align:center;">{{'LOGIN'|translate}}</h3>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-12">
                     <label for="username">{{'NAME'|translate}}: </label>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 col-12">
                     <div class="row">
                         <input class="form-control" id="username" type="text" formControlName="username">
                     </div>
@@ -21,10 +21,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-12">
                     <label for="name">{{'PASSWORD'|translate}} </label>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 col-12">
                     <div class="row">
                         <input class="form-control" id="password" type="password" formControlName="password">
                     </div>

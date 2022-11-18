@@ -1,0 +1,19 @@
+<div class="container content">
+    <ul id="progressbar">
+        <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Selection</li>
+        <li [ngClass]="step>=2 ? 'active' : 'inactive'">Bet</li>
+        <li [ngClass]="step>=3 ? 'active' : 'inactive'">Summary</li>
+    </ul>
+    <app-iframe *ngIf="step == 1"></app-iframe>
+    <app-selection *ngIf="step == 1"></app-selection>
+    <app-bet-step *ngIf="step == 2"></app-bet-step>
+    <app-summary *ngIf="step == 3"></app-summary>
+    <div class="row">
+        <div class="col">
+            <button *ngIf="step > 1" class="btn btn-secondary float-right" (click)="previous()">Previous</button>
+        </div>
+        <div class="col">
+            <button *ngIf="step < 4" class="btn btn-primary float-right" (click)="next()">Next</button>
+        </div>
+    </div>
+</div>

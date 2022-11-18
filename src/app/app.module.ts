@@ -10,13 +10,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BetComponent } from './bet/bet.component';
+import { SelectionComponent } from './bet/selection/selection.component';
+import { IframeComponent } from './bet/selection/iframe/iframe.component';
+import { BetStepComponent } from './bet/bet-step/bet-step.component';
+import { SummaryComponent } from './bet/summary/summary.component';
+import { InfoComponent } from './bet/summary/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    BetComponent,
+    SelectionComponent,
+    IframeComponent,
+    BetStepComponent,
+    SummaryComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
