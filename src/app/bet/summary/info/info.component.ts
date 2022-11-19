@@ -17,12 +17,13 @@ export class InfoComponent implements OnInit {
       username: new FormControl('', [
         Validators.required
       ]),
-      password: new FormControl('', [
+      email: new FormControl('', [
         Validators.required
       ]),
-      repeatPassword: new FormControl('', [
+      payment: new FormControl('', [
         Validators.required
       ]),
+      sendEmail: new FormControl(''),
     });
   }
 

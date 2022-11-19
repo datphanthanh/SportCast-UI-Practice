@@ -2,7 +2,7 @@
 <div class="wrapper">
     <div class="row">
         <div class="col-md-4">
-            <input class="form-control" id="enter-stake" type="number" step="0.01" placeholder="Enter Stake" [formControl]="enterStake">
+            <input class="form-control" id="enter-stake" type="number" step="0.01" placeholder="Enter Stake" (change)="getStakeValue($event)" [formControl]="enterStake">
         </div>
     </div>
     <div class="row">

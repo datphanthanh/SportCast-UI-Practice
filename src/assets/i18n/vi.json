@@ -7,9 +7,9 @@
     "SUBMIT": "Xác nhận",
     "BET_SELECTIONS": "Các lựa chọn đặt cược",
     "BET_ODDS": "Tỷ lệ cược",
-    "TOTAL_BETS": "Tổng số tiền cược",
+    "TOTAL_BETS": "Tổng số cược",
     "EST_WINNINGS": "Ước tính Tiền thắng",
     "EMAIL": "E-mail",
-    "PAYMENT": "Thanh toán",
-    "SEND_TO_EMAIL": "Gửi thông tin đến email"
+    "SEND_TO_EMAIL": "Gửi thông tin đến email",
+    "PAYMENT": "Thanh toán"
 }

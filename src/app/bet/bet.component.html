@@ -6,14 +6,15 @@
     </ul>
     <app-iframe *ngIf="step == 1"></app-iframe>
     <app-selection *ngIf="step == 1"></app-selection>
-    <app-bet-step *ngIf="step == 2"></app-bet-step>
-    <app-summary *ngIf="step == 3"></app-summary>
+    <app-bet-step (getStakeEvent)="getStakeValue($event)" *ngIf="step == 2" [stake]="stake">
+    </app-bet-step>
+    <app-summary *ngIf="step == 3" [stake]="stake"></app-summary>
     <div class="row">
         <div class="col">
             <button *ngIf="step > 1" class="btn btn-secondary float-right" (click)="previous()">Previous</button>
         </div>
         <div class="col">
-            <button *ngIf="step < 4" class="btn btn-primary float-right" (click)="next()">Next</button>
+            <button *ngIf="step < 4" class="btn btn-primary float-right" (click)="next()">{{step < 3 ? 'Next' : 'Bet'}}</button>
         </div>
     </div>
 </div>
