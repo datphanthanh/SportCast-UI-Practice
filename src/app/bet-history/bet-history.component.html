@@ -1,0 +1,37 @@
+<div class="container content">
+    <h5>{{'BET_HISTORY'|translate}}</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col" sortable="Match" (sort)="onSort($event)">Match</th>
+                <th scope="col" sortable="SlipId" (sort)="onSort($event)">Slip Id</th>
+                <th scope="col" sortable="Description" (sort)="onSort($event)">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of histories">
+                <td>{{item.Match}}</td>
+                <td>{{item.SlipId}}</td>
+                <td>{{item.Description}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination 
+            [(page)]="page" 
+            [pageSize]="pageSize" 
+            [collectionSize]="totalRecord"
+            (pageChange)="getHistories()"
+        >
+        </ngb-pagination>
+        <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="getHistories()">
+            <option [ngValue]="10">10</option>
+            <option [ngValue]="20">20</option>
+            <option [ngValue]="50">50</option>
+            <option [ngValue]="totalRecord">All</option>
+        </select>
+    </div>
+    <div class="row">
+        <a routerLink="/bet" class="float-right">{{'BET'|translate}}</a>
+    </div>
+</div>

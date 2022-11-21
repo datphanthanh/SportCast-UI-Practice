@@ -16,6 +16,10 @@ import { IframeComponent } from './bet/selection/iframe/iframe.component';
 import { BetStepComponent } from './bet/bet-step/bet-step.component';
 import { SummaryComponent } from './bet/summary/summary.component';
 import { InfoComponent } from './bet/summary/info/info.component';
+import { BetHistoryComponent } from './bet-history/bet-history.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbdSortableHeader} from '../app/Models/ngbd-sortable-header';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { InfoComponent } from './bet/summary/info/info.component';
     IframeComponent,
     BetStepComponent,
     SummaryComponent,
-    InfoComponent
+    InfoComponent,
+    BetHistoryComponent,
+    NgbdSortableHeader
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,9 @@ import { InfoComponent } from './bet/summary/info/info.component';
         useFactory: httpTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

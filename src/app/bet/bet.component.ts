@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-bet',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class BetComponent implements OnInit {
   step = 1;
   stake: number;
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -16,9 +20,8 @@ export class BetComponent implements OnInit {
   next() {
     if (this.step < 3) {
       this.step += 1;
-    }
-    if (this.step == 3) {
-      //call api submit here
+    } else {
+      this.router.navigate(['/history'], { relativeTo: this.route });
     }
   }
 

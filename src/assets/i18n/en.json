@@ -11,5 +11,7 @@
     "EST_WINNINGS": "Est. Winnings",
     "EMAIL": "Email",
     "SEND_TO_EMAIL": "Send information to email",
-    "PAYMENT": "Payment"
+    "PAYMENT": "Payment",
+    "BET_HISTORY": "Bet history",
+    "BET": "Bet Page"
 }
