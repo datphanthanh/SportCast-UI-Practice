@@ -3,7 +3,6 @@
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
 @import "~bootstrap/scss/bootstrap";
-
 .container.content {
     margin-top: 16px;
 }
@@ -15,5 +14,7 @@
     margin: 10px 0 10px 0;
     padding: 20px;
 }
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+
+form {
+    margin: 0 10px 0 10px;
+}

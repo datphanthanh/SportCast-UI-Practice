@@ -6,7 +6,7 @@ import { BetComponent } from './bet/bet.component';
 import { BetHistoryComponent } from './bet-history/bet-history.component';
 
 const routes: Routes = [
-  { path: '', component: BetComponent },
+  { path: '', component: LoginComponent },
   { path: 'bet', component: BetComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

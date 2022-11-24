@@ -4,17 +4,26 @@
         <li [ngClass]="step>=2 ? 'active' : 'inactive'">Bet</li>
         <li [ngClass]="step>=3 ? 'active' : 'inactive'">Summary</li>
     </ul>
-    <app-iframe *ngIf="step == 1"></app-iframe>
-    <app-selection *ngIf="step == 1"></app-selection>
-    <app-bet-step (getStakeEvent)="getStakeValue($event)" *ngIf="step == 2" [stake]="stake">
-    </app-bet-step>
-    <app-summary *ngIf="step == 3" [stake]="stake"></app-summary>
-    <div class="row">
-        <div class="col">
-            <button *ngIf="step > 1" class="btn btn-secondary float-right" (click)="previous()">Previous</button>
+    <!-- Step 1: Selection -->
+    <ng-template [ngIf]="step == 1">
+        <app-iframe></app-iframe>
+        <app-selection></app-selection>
+    </ng-template>
+    <!-- Step 2: Bet -->
+    <ng-template [ngIf]="step == 2">
+        <app-bet-step (getStakeEvent)="getStakeValue($event)" [stake]="stake"></app-bet-step>
+    </ng-template>
+    <!-- Step 3: Summary -->
+    <ng-template [ngIf]="step == 3">
+        <app-summary [stake]="stake"></app-summary>
+    </ng-template>
+    
+    <div class="col-6 float-end">
+        <div class="col-6 float-end">
+            <button *ngIf="step < 4" class="btn btn-primary float-end" (click)="next()">{{step < 3 ? 'Next' : 'Bet'}}</button>
         </div>
-        <div class="col">
-            <button *ngIf="step < 4" class="btn btn-primary float-right" (click)="next()">{{step < 3 ? 'Next' : 'Bet'}}</button>
+        <div class="col-6 float-end">
+            <button *ngIf="step > 1" class="btn btn-secondary float-end" (click)="previous()">Previous</button>
         </div>
     </div>
 </div>

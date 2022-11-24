@@ -13,10 +13,10 @@ export class FakeHistoryService {
     }
    }
 
-  getHistories(page:number, pageSize: number) {
+  getHistories(pageIndex:number, pageSize: number) {
     return this.histories.slice(
-			(page - 1) * pageSize,
-			(page - 1) * pageSize + pageSize,
+			(pageIndex - 1) * pageSize,
+			(pageIndex - 1) * pageSize + pageSize,
 		);;
   }
 

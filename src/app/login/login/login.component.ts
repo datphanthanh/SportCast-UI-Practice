@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.loginForm.valid) {
-      this.router.navigate([''], { relativeTo: this.route });
+      this.router.navigate(['/bet'], { relativeTo: this.route });
       console.warn(this.loginForm.value);
     }
 
