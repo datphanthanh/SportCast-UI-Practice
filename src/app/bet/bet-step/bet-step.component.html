@@ -17,10 +17,10 @@
     </div>
     <div class="row">
         <div class="col-6">
-            <label>{{'TOTAL_BETS'|translate}}: 3</label>
+            <label>{{'TOTAL_BETS'|translate}}: {{betSelection.Selections.length}}</label>
         </div>
         <div class="col-6">
-            <label class="float-right">4.00 USD</label>
+            <label class="float-right">{{stake}} USD</label>
         </div>
     </div>
     <div class="row">
@@ -28,7 +28,7 @@
             <label>{{'EST_WINNINGS'|translate}}</label>
         </div>
         <div class="col-6 ">
-            <label class="float-right">8.00 USD</label>
+            <label class="float-right">{{estWinnings}} USD</label>
         </div>
     </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BetSelection } from 'src/app/Models/bet-selection';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-selection',
@@ -6,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selection.component.scss']
 })
 export class SelectionComponent implements OnInit {
-  betSelections: string[];
+  betSelection: BetSelection;
   betOdds: number;
-  constructor() { }
+  constructor(
+    private sharedService: SharedService
+  ) { }
 
   ngOnInit(): void {
-    this.betSelections = ['Selection 1', 'Selection 2', 'Selection 3'];
-    this.betOdds = this.getRandomFloat(0, 1, 2);
+    this.sharedService.messageSource.subscribe((message) => {
+      this.betSelection = message
+    });
   }
 
   getRandomFloat(min: number, max: number, decimals: number) {

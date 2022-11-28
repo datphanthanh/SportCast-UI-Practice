@@ -1,3 +1,19 @@
 <div class="wrapper">
+    <form [formGroup]="fixtureForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-1 col-4">
+                <label for="username">Fixture: </label>
+            </div>
+            <div class="col-md-2 col-4">
+                <div class="row">
+                    <input class="form-control" id="fixturesId" type="text" formControlName="fixtureId">
+                </div>
+            </div>
+            <div class="col-md-2 col-4">
+                <button class="btn btn-primary col-md-3 col-6 btn-load" type="submit">Load</button>
+            </div>
+        </div>
+    </form>
+
     <iframe id="bbWidget" width="80%" height="60%" [src]="iFrameUrl"></iframe>
 </div>

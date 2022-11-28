@@ -7,7 +7,7 @@ import { HistoryModel } from '../Models/history-model';
 export class FakeHistoryService {
   histories : Array<HistoryModel> = [];
   constructor() {
-    for (let index = 1; index <= 100; index++) {
+    for (let index = 1; index <= 50; index++) {
       const element = new HistoryModel (`Match ${index}`, `SlipId: ${index}`, `Description ${index}`);
       this.histories.push(element);
     }

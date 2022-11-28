@@ -1,4 +1,4 @@
-th[sortable].asc::before {
+th[sortable].asc:before {
     content: "";
     display: block;
     background: url('../../assets/images/sort-amount-up-reversed.png') no-repeat;
@@ -17,4 +17,7 @@ th[sortable].desc:before {
     height: 22px;
     float: left;
     margin-left: -22px;
+}
+.form-select {
+    height: 38px;
 }

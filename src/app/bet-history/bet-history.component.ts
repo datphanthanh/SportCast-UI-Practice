@@ -13,7 +13,7 @@ import { FakeHistoryService } from '../services/fake-history.service';
 export class BetHistoryComponent implements OnInit {
   public page = 1;
   public pageSize = 10;
-  public totalRecord = 100;
+  public totalRecord = 50;
   public histories: Array<HistoryModel> = [];
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
 
